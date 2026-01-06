@@ -13,29 +13,29 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       color: white;
     }
 
     .card {
-      background: rgba(0,0,0,0.5);
-      border-radius: 26px;
-      padding: 26px;
+      background: rgba(0,0,0,0.55);
+      border-radius: 28px;
+      padding: 28px;
       max-width: 420px;
       text-align: center;
       box-shadow: 0 30px 60px rgba(0,0,0,0.7);
-      animation: surgir 2s ease;
+      animation: surgir 1.8s ease;
     }
 
     img {
       width: 100%;
-      border-radius: 20px;
+      border-radius: 22px;
       margin-bottom: 18px;
     }
 
     h1 {
       font-size: 28px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .contador {
@@ -46,7 +46,7 @@
 
     p {
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     @keyframes surgir {
@@ -64,6 +64,7 @@
 
 <body>
   <div class="card">
+    <!-- IMPORTANTE: a foto deve se chamar exatamente "foto.jpeg" -->
     <img src="foto.jpeg" alt="Nós dois">
 
     <h1>7 meses de nós 🤍</h1>
@@ -71,12 +72,12 @@
     <div class="contador" id="contador"></div>
 
     <p>
-       Sete meses atrás, eu não fazia ideia<br>
+      Sete meses atrás, eu não fazia ideia<br>
       de que alguém poderia mudar tanto o meu mundo.<br><br>
 
       Você chegou com seu jeito romântico,<br>
       seu riso que ilumina tudo<br>
-      e seu coração intenso que sente de verdade.<br><br>
+      e esse coração intenso que sente de verdade.<br><br>
 
       Em 7 meses, você virou meu costume favorito,<br>
       meu pensamento tranquilo<br>
@@ -84,15 +85,16 @@
 
       Não prometo perfeição.<br>
       Prometo presença.<br><br>
-      
+
       Feliz 7 meses, meu amor 🤍
     </p>
   </div>
 
   <script>
-    // 👉 MUDE A DATA AQUI (ANO, MÊS-1, DIA, HORA, MINUTO)
-    const inicio = new Date(2025, 6, 6, 19, 10, 0); 
-    // Exemplo: 2 de junho de 2025 → mês 5 (junho)
+    // 👉 MUDE A DATA AQUI SE PRECISAR
+    // (ANO, MÊS-1, DIA, HORA, MINUTO)
+    const inicio = new Date(2025, 6, 6, 19, 10, 0);
+    // EXEMPLO: junho = mês 5 | julho = mês 6
 
     function atualizarContador() {
       const agora = new Date();
@@ -116,4 +118,3 @@
   </script>
 </body>
 </html>
-
