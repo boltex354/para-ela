@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>7 meses de nós 🤍</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -16,36 +18,41 @@
     }
 
     .card {
-      background: rgba(0,0,0,0.45);
-      border-radius: 24px;
-      padding: 28px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 26px;
+      padding: 26px;
       max-width: 420px;
       text-align: center;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-      animation: aparecer 1.8s ease;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+      animation: surgir 2s ease;
     }
 
     img {
       width: 100%;
-      border-radius: 18px;
-      margin-bottom: 20px;
+      border-radius: 20px;
+      margin-bottom: 18px;
     }
 
     h1 {
       font-size: 28px;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
+    }
+
+    .contador {
+      font-size: 15px;
+      margin-bottom: 18px;
+      opacity: 0.95;
     }
 
     p {
       font-size: 16px;
       line-height: 1.7;
-      opacity: 0.95;
     }
 
-    @keyframes aparecer {
+    @keyframes surgir {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(25px);
       }
       to {
         opacity: 1;
@@ -54,29 +61,54 @@
     }
   </style>
 </head>
+
 <body>
   <div class="card">
     <img src="foto.jpeg" alt="Nós dois">
 
     <h1>7 meses de nós 🤍</h1>
 
+    <div class="contador" id="contador"></div>
+
     <p>
-      Sete meses atrás, eu não fazia ideia<br>
-      de que alguém poderia mudar tanto o meu mundo.<br><br>
+      Desde o dia em que você chegou,<br>
+      o tempo ganhou outro significado.<br><br>
 
-      Você chegou com seu jeito romântico,<br>
-      seu riso que ilumina tudo<br>
-      e seu coração intenso que sente de verdade.<br><br>
+      Cada dia ao seu lado é cuidado,<br>
+      cada riso é casa,<br>
+      cada momento é escolha.<br><br>
 
-      Em 7 meses, você virou meu costume favorito,<br>
-      meu pensamento tranquilo<br>
-      e meu lugar seguro.<br><br>
-
-      Não prometo perfeição.<br>
-      Prometo presença.<br><br>
+      Não sei o que o futuro guarda,<br>
+      mas sei com quem eu quero viver cada segundo.<br><br>
 
       Feliz 7 meses, meu amor 🤍
     </p>
   </div>
+
+  <script>
+    // 👉 MUDE A DATA AQUI (ANO, MÊS-1, DIA, HORA, MINUTO)
+    const inicio = new Date(2025, 5, 2, 0, 0, 0); 
+    // Exemplo: 2 de junho de 2025 → mês 5 (junho)
+
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - inicio;
+
+      const segundos = Math.floor(diff / 1000);
+      const minutos = Math.floor(segundos / 60);
+      const horas = Math.floor(minutos / 60);
+      const dias = Math.floor(horas / 24);
+
+      const h = horas % 24;
+      const m = minutos % 60;
+      const s = segundos % 60;
+
+      document.getElementById("contador").innerHTML =
+        `Juntos há ${dias} dias, ${h}h ${m}m ${s}s 🤍`;
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
 </body>
 </html>
